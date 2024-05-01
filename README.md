@@ -35,7 +35,7 @@ All features:
   - To run Flexa, use `node .`
   
 ### Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
-```settings
+```nginx
 {
   "name": "Flexa",
   "pterodactyl": {
