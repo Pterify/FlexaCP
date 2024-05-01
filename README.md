@@ -1,4 +1,4 @@
-![alt text]([http://url/to/img.png](https://media.discordapp.net/attachments/1235321743833305239/1235335936674369546/FlexaCP.png?ex=6633ffbe&is=6632ae3e&hm=da31853581925cddceb8b228e1e2063d77cdcd05674a8c993b0f77e6515106c1&=&format=webp&quality=lossless&width=904&height=509))
+![alt text](https://media.discordapp.net/attachments/1235321743833305239/1235335936674369546/FlexaCP.png?ex=6633ffbe&is=6632ae3e&hm=da31853581925cddceb8b228e1e2063d77cdcd05674a8c993b0f77e6515106c1&=&format=webp&quality=lossless&width=904&height=509)
 
 # Flexa
 
