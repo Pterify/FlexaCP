@@ -1,0 +1,56 @@
+<head>
+  <title><%= settings.name %></title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/tailwind.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white rounded-lg shadow sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-900 antialiased" style="font-family: 'Inter', sans-serif;">
+  <%- include('../components/navigation') %>
+  <div class="md:pl-52 flex flex-col flex-1 h-screen">
+    <main class="flex-1 pb-32">
+      <div class="py-6">
+        <% /* Skeleton loader, lasts about 0.3s to let the page content load */ %>
+        <%- include('../components/skeleton') %>
+        <div class="hidden max-w-7xl pt-8 mx-auto px-4 sm:px-6 md:px-8" id="content">
+          <div>
+            <div>
+              <img class="h-32 w-full object-cover lg:h-72 rounded-3xl" src="../assets/hero.webp" alt=""> <!-- Path: assets/profileBanner.png - You can replace this image to change the default profile banner -->
+            </div>
+            <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+              <div class="-mt-12 sm:-mt-16 sm:flex sm:items-end sm:space-x-5">
+                <div class="flex">
+                  <img class="h-24 w-24 rounded-full ring-4 ring-white sm:h-32 sm:w-32" src="https://cdn.discordapp.com/avatars/<%= userinfo.id %>/<%= userinfo.avatar %>?size=256" alt="">
+                </div>
+                <div class="mt-6 sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:justify-end sm:space-x-6 sm:pb-1">
+                  <div class="mt-6 min-w-0 flex-1 sm:hidden md:block">
+                    <h1 class="truncate text-2xl font-medium tracking-tight text-white"><%= userinfo.global_name %></h1>
+                  </div>
+                  <div class="justify-stretch mt-6 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
+                    <a href="../logout" type="button" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-[4d7c0f] hover:bg-{#3f6212} focus:ring-4 focus:ring-primary-300 dark:bg-[#65a30d] dark:hover:bg-[#4d7c0f] focus:outline-none dark:focus:ring-[#3f6212]">
+                      Sign out
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-10">
+            <div class="card-body">
+              <label class="text-sm font-medium pb-4 text-white">User Object</label>
+              <div class="bg-gray-800/70 px-8 py-2 mt-4 rounded-t-3xl text-white"><span class="text-white text-xs font-semibold">JSON</span></div>
+              <pre class="text-xs bg-gray-800 pb-8 pl-8 pr-8 pt-2 mb-6 rounded-b-3xl text-white"><%= JSON.stringify(userinfo, null, 2) %></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../components/footer') %>
+  </div>
+  </div>
+</body>

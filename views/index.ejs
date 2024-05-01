@@ -1,0 +1,50 @@
+<html class="h-full">
+
+<head>
+  <title><%= settings.name %></title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/tailwind.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white rounded-lg shadow sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-gray-900 antialiased" style="font-family: 'Inter', sans-serif;">
+  <div class="flex min-h-full">
+    <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="mx-auto w-full max-w-sm lg:w-96">
+        <div>
+          <span class="text-white text-lg font-semibold tracking-tight mt-2 mb-2"><%= settings.name %></span>
+          <h2 class="mt-6 text-3xl font-semibold tracking-tight text-white">Sign in to your account</h2>
+          <p class="mt-2 text-sm text-white">
+            Welcome back! Sign in to continue.
+          </p>
+        </div>
+
+        <div class="mt-16">
+          <div>
+            <div class="relative mt-6">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <form action="#" method="POST" class="space-y-6">
+              <div>
+                <a href="../login" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-[4d7c0f] hover:bg-{#3f6212} focus:ring-4 focus:ring-primary-300 dark:bg-[#65a30d] dark:hover:bg-[#4d7c0f] focus:outline-none dark:focus:ring-[#3f6212]">Sign in with Discord</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative hidden w-0 flex-1 lg:block">
+      <img class="absolute inset-0 h-full w-full object-cover rounded-3xl" src="../assets/loginBackground.png" alt="">
+    </div>
+  </div>
+</body>
