@@ -272,7 +272,15 @@ All features:
 }
 ```
 
-### Create SSL certificates for your target domain and set up the NGINX reverse proxy
+### Create SSL certificates
+
+ - Run `sudo apt update`
+ - Run `sudo apt install -y certbot`
+ - Run `ufw allow 80 && ufw allow 443`
+ - Run `sudo apt install -y python3-certbot-nginx`
+ - Run `certbot certonly --nginx -d <Your Flexa Domain>`
+
+## NGINX reverse proxy
 
 ```nginx
 server {
