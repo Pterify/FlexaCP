@@ -271,6 +271,7 @@ All features:
   }
 }
 ```
+
 4. Create SSL certificates for your target domain and set up the NGINX reverse proxy
 
 ## NGINX Reverse Proxy
