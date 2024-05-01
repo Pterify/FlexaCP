@@ -17,11 +17,15 @@ All features:
 - API (for bots & other things)
 
 
-## Get started
+## Install Guide
 
 You can get started straight away by following these steps:
+1. Install Nodejs 16, it's recommended to install it with nvm `sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
+ - reopen a new ssh session (eg restart putty)
+ - `nvm install 16`
+ - check the node version with `node -v`
 
-1. Clone the repo: Run `git clone https://github.com/heliactyloss/heliactyl` on your machine
+1. Clone the repo: Run `git clone https://github.com/Pterify/flexacp` on your machine
 2. Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
 3. Check everything out and make sure you've configured Heliactyl correctly
 4. Create SSL certificates for your target domain and set up the NGINX reverse proxy
