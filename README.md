@@ -26,15 +26,15 @@ You can get started straight away by following these steps:
   - check the node version with `node -v`
 
 2. Download heliactyl files on your machine
-  <br>
+  
   Ubuntu 20.04 - 22.04
   - Clone the repo: `https://github.com/Pterify/flexacp.git /var/www/heliactyl`
   - `cd /var/www/heliactyl && npm i`
   - To run Flexa, use `node .`
-  <br>
+  
   Windows
   - Download repo: [Download](https://github.com/Pterify/flexacp/archive/refs/heads/main.zip)
-  <br>
+  
 2. Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
 3. Check everything out and make sure you've configured Heliactyl correctly
 4. Create SSL certificates for your target domain and set up the NGINX reverse proxy
