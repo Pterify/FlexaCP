@@ -1,4 +1,4 @@
-![alt text](https://cdn.discordapp.com/attachments/1170429889829154970/1220410297496375326/Mercury_v2_2.png?ex=660ed6a9&is=65fc61a9&hm=f0c3720aeceab7e096658d153fa2494dfd8ca05999d7a21a056e4b3dda49da50&)
+![alt text]([https://cdn.discordapp.com/attachments/1170429889829154970/1220410297496375326/Mercury_v2_2.png?ex=660ed6a9&is=65fc61a9&hm=f0c3720aeceab7e096658d153fa2494dfd8ca05999d7a21a056e4b3dda49da50&](https://cdn.discordapp.com/attachments/1235321743833305239/1235335936674369546/FlexaCP.png?ex=6633ffbe&is=6632ae3e&hm=da31853581925cddceb8b228e1e2063d77cdcd05674a8c993b0f77e6515106c1&))
 
 # Flexa
 
