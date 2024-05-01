@@ -282,6 +282,9 @@ All features:
 
 ## NGINX reverse proxy
 
+ - Run `nano /etc/nginx/sites-enabled/heliactyl.conf`
+ - Paste the configuration at the bottom of this and replace with the IP of the pterodactyl server including the port and with the domain you want your dashboard to be hosted on
+
 ```nginx
 server {
     listen 80;
@@ -311,3 +314,4 @@ location / {
   }
 }
 ```
+ - Run `systemctl restart nginx` and try open your domain.
