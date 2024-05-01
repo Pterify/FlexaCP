@@ -18,10 +18,6 @@ All features:
 
 
 ## Install Guide
-
-You can get started straight away by following these steps:
-
-1. Download heliactyl files on your machine
   
   Ubuntu 20.04 - 22.04 ✅
   - Install Nodejs 16, it's recommended to install it with nvm `sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
