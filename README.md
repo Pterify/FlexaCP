@@ -1,6 +1,6 @@
 ![alt text](https://media.discordapp.net/attachments/1235321743833305239/1235335936674369546/FlexaCP.png?ex=6633ffbe&is=6632ae3e&hm=da31853581925cddceb8b228e1e2063d77cdcd05674a8c993b0f77e6515106c1&=&format=webp&quality=lossless&width=904&height=509)
 
-# Flexa
+# Flexa V1.0
 
 > [!NOTE]
 > Flexa is a Heliactyl 14 but a Flexa Style, We just changed the design to the modern way.
@@ -31,10 +31,245 @@ All features:
   Windows ✅
   - Download Nodejs: [Download x64](https://nodejs.org/dist/v18.20.2/node-v18.20.2-x64.msi)
   - Download repo: [Download](https://github.com/Pterify/flexacp/archive/refs/heads/main.zip)
+  - `npm install`
   - To run Flexa, use `node .`
   
-2. Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
-3. Check everything out and make sure you've configured Heliactyl correctly
+## Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
+```
+{
+  "name": "Flexa",
+  "pterodactyl": {
+    "domain": "https://panel.example.com",
+    "key": "ptla_0000000000000000000000000000000000000000000"
+  },
+  "timezone": "Europe/London",
+  "version": "1.0",
+  "testing": false,
+  "website": {
+    "port": 3000,
+    "secret": "Default Secret (Change this to any string you want)"
+  },
+  "database": "sqlite://database.sqlite",
+  "api": {
+    "client": {
+      "accountSwitcher": true,
+      "api": {
+        "enabled": true,
+        "code": "Default API Key (Change this to any string you want)"
+      },
+      "j4r": {
+        "enabled": false,
+        "ads": [
+        ]
+      },
+      "bot": {
+        "token": "Your Discord bot token",
+        "joinguild": {
+          "_comment": "The Discord bot must be in these servers and have invite permissions. Automatic guild joining will not work unless role packages are configured correctly. You can always just set it to a random role & package so that only this works.",
+          "enabled": false,
+          "guildid": [
+            "000000000000000000"
+          ]
+        },
+        "giverole": {
+          "_comment": "Auto-join must be enabled for this to work - or the user must already be in your Discord. This will give the user a role when they login.",
+          "enabled": false,
+          "guildid": "000000000000000000",
+          "roleid": "000000000000000000"
+        }
+      },
+      "passwordgenerator": {
+        "signup": true,
+        "note": "Use this to disable registering on flexa.",
+        "length": 16
+      },
+      "allow": {
+        "newusers": true,
+        "regen": true,
+        "server": {
+          "create": true,
+          "modify": true,
+          "delete": true
+        },
+        "overresourcessuspend": false
+      },
+      "oauth2": {
+        "_comment": "Go to https://discord.dev/ and create an application to set up OAuth2. This is required for flexa to work. You must also set the redirect URL to the link below.",
+        "id": "0000000000000000000",
+        "secret": "0000000000000000000000000000-",
+        "link": "https://client.example.com",
+        "callbackpath": "/callback",
+        "prompt": true,
+        "ip": {
+          "trust x-forwarded-for": true,
+          "block": [],
+          "duplicate check": false,
+          "_note": "Anti-alt checks will not work if you are proxying through Cloudflare. This is due to the fact that Cloudflare does not pass the real IP address through the headers. If you are using Cloudflare, please disable this feature."
+        }
+      },
+      "ratelimits": {
+        "/callback": 2,
+        "/create": 1,
+        "/delete": 1,
+        "/modify": 1,
+        "/updateinfo": 1,
+        "/setplan": 2,
+        "/admin": 1,
+        "/regen": 1,
+        "/renew": 1,
+        "/api/userinfo": 1
+      },
+      "packages": {
+        "default": "default",
+        "list": {
+          "default": {
+            "ram": 1024,
+            "disk": 1024,
+            "cpu": 100,
+            "servers": 2
+          }
+        },
+        "rolePackages": {
+          "note": "This allows you to set a different plan/package to people who have a specific role however this requires the Discord bot to be configured and functioning. This is mainly used for Boost rewards.",
+          "roleServer": "Discord Server ID",
+          "roles": {
+            "Discord Role ID": "flexa package name"
+          }
+        }
+      },
+      "locations": {
+        "1": {
+          "package": null,
+          "name": "Location 1"
+        }
+      },
+      "eggs": {
+        "paper": {
+          "display": "Paper",
+          "minimum": {
+            "ram": 1024,
+            "disk": 1024,
+            "cpu": 100
+          },
+          "maximum": {
+            "ram": null,
+            "disk": null,
+            "cpu": null
+          },
+          "info": {
+            "egg": 5,
+            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
+            "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}",
+            "environment": {
+              "SERVER_JARFILE": "server.jar",
+              "BUILD_NUMBER": "latest"
+            },
+            "feature_limits": {
+              "databases": 0,
+              "backups": 4
+            }
+          }
+        },
+        "bungeecord": {
+          "display": "BungeeCord",
+          "minimum": {
+            "ram": 512,
+            "disk": 512,
+            "cpu": 75
+          },
+          "maximum": {
+            "ram": null,
+            "disk": null,
+            "cpu": null
+          },
+          "info": {
+            "egg": 3,
+            "docker_image": "ghcr.io/pterodactyl/yolks:java_17",
+            "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}",
+            "environment": {
+              "SERVER_JARFILE": "bungeecord.jar",
+              "BUNGEE_VERSION": "latest"
+            },
+            "feature_limits": {
+              "databases": 4,
+              "backups": 4
+            }
+          }
+        }
+      },
+      "coins": {
+        "enabled": true,
+        "store": {
+          "enabled": true,
+          "ram": {
+            "cost": 300,
+            "per": 1024
+          },
+          "disk": {
+            "cost": 200,
+            "per": 5120
+          },
+          "cpu": {
+            "cost": 350,
+            "per": 100
+          },
+          "servers": {
+            "cost": 100,
+            "per": 2
+          }
+        }
+      }
+    },
+    "afk": {
+      "path": "ws",
+      "every": 60,
+      "coins": 1,
+      "enabled": true
+    }
+  },
+  "antivpn": {
+    "note": "For this to work, generate an API Key on https://proxycheck.io/. If you do not put a key, flexa will automatically disable anti-VPN.",
+    "status": false,
+    "APIKey": "Proxycheck API Key",
+    "whitelistedIPs": [
+      "IP address"
+    ]
+  },
+  "whitelist": {
+    "note": "This allows only specific people to be able to login to the flexa dashboard. This does not affect your Panel.",
+    "status": false,
+    "users": [
+      "User ID"
+    ]
+  },
+  "logging": {
+    "status": false,
+    "webhook": "Webhook URL",
+    "actions": {
+      "user": {
+        "signup": true,
+        "create server": true,
+        "gifted coins": true,
+        "modify server": true,
+        "buy servers": true,
+        "buy ram": true,
+        "buy cpu": true,
+        "buy disk": true
+      },
+      "admin": {
+        "set coins": true,
+        "add coins": true,
+        "set resources": true,
+        "set plan": true,
+        "create coupon": true,
+        "revoke coupon": true,
+        "remove account": true,
+        "view ip": true
+      }
+    }
+  }
+}
+```
 4. Create SSL certificates for your target domain and set up the NGINX reverse proxy
 
 ## NGINX Reverse Proxy
