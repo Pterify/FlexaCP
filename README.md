@@ -3,7 +3,7 @@
 # Flexa V1.0
 
 > [!NOTE]
-> Flexa is a Heliactyl 14 but a Flexa Style, We just changed the design to the modern way.
+> Flexa is a [Heliactyl 14](https://github.com/heliactyloss/heliactyl) but a Flexa Style, We just changed the design to the modern way.
 
 Flexa is a high-performance client area for the Pterodactyl Panel. It allows your users to create, edit and delete servers, and also earn coins which can be used to upgrade their servers.
 
@@ -19,7 +19,7 @@ All features:
 
 ## Install Guide
 
-  Ubuntu 22.04 - 20.04 ✅
+  Ubuntu 22.04 - 20.04 ✅ <br>
   Debian 10 - 11 - 12 ✅
   - Install Nodejs 16, it's recommended to install it with nvm `sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
   - reopen a new ssh session (eg restart putty)
