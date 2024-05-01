@@ -19,7 +19,7 @@ All features:
 
 ## Install Guide
 
-    | Operating System | Version | Supported          | PHP Version |
+| Operating System | Version | Supported          | PHP Version |
 | ---------------- | ------- | ------------------ | ----------- |
 | Ubuntu           | 14.04   | :red_circle:       |             |
 |                  | 16.04   | :red_circle: \*    |             |
