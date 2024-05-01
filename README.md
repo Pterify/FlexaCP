@@ -19,7 +19,7 @@ All features:
 
 ## Install Guide
   
-  Ubuntu 20.04 - 22.04 ✅
+  Ubuntu 20.04 - 22.04 ✅ <br>
   Debian 10 - 11 - 12 ✅
   - Install Nodejs 16, it's recommended to install it with nvm `sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
   - reopen a new ssh session (eg restart putty)
