@@ -27,12 +27,12 @@ You can get started straight away by following these steps:
 
 2. Download heliactyl files on your machine
   
-  Ubuntu 20.04 - 22.04
+   Ubuntu 20.04 - 22.04 ✅
   - Clone the repo: `https://github.com/Pterify/flexacp.git /var/www/heliactyl`
   - `cd /var/www/heliactyl && npm i`
   - To run Flexa, use `node .`
   
-  Windows
+   Windows ✅
   - Download repo: [Download](https://github.com/Pterify/flexacp/archive/refs/heads/main.zip)
   
 2. Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
