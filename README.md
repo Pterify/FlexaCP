@@ -20,20 +20,22 @@ All features:
 ## Install Guide
 
 You can get started straight away by following these steps:
-1. Install Nodejs 16, it's recommended to install it with nvm `sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
+
+1. Download heliactyl files on your machine
+  
+  Ubuntu 20.04 - 22.04 ✅
+  - Install Nodejs 16, it's recommended to install it with nvm `sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash`
   - reopen a new ssh session (eg restart putty)
   - `nvm install 16`
   - check the node version with `node -v`
-
-2. Download heliactyl files on your machine
-  
-  Ubuntu 20.04 - 22.04 ✅
   - Clone the repo: `https://github.com/Pterify/flexacp.git /var/www/heliactyl`
   - `cd /var/www/heliactyl && npm i`
   - To run Flexa, use `node .`
   
   Windows ✅
+  - Download Nodejs: [Download x64](https://nodejs.org/dist/v18.20.2/node-v18.20.2-x64.msi)
   - Download repo: [Download](https://github.com/Pterify/flexacp/archive/refs/heads/main.zip)
+  - To run Flexa, use `node .`
   
 2. Enter the directory and configure the `settings.json` file - most are optional except the Pterodactyl and OAuth2 settings which **must** be configured
 3. Check everything out and make sure you've configured Heliactyl correctly
