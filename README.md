@@ -45,7 +45,6 @@ All features:
   },
   "timezone": "Europe/London",
   "version": "1.0",
-  "testing": false,
   "website": {
     "port": 3000,
     "secret": "Default Secret (Change this to any string you want)"
@@ -272,9 +271,7 @@ All features:
 }
 ```
 
-4. Create SSL certificates for your target domain and set up the NGINX reverse proxy
-
-## NGINX Reverse Proxy
+#### Create SSL certificates for your target domain and set up the NGINX reverse proxy
 
 Here's a proxy config that we recommend, however you are free to change it:
 
