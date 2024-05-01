@@ -42,7 +42,7 @@ All features:
   "name": "Flexa",
   "pterodactyl": {
     "domain": "https://panel.example.com",
-    "key": "ptla_0000000000000000000000000000000000000000000"
+    "key": "Your Pterodactyl API key with all permissions"
   },
   "timezone": "Europe/London",
   "version": "1.0",
@@ -81,7 +81,7 @@ All features:
       },
       "passwordgenerator": {
         "signup": true,
-        "note": "Use this to disable registering on flexa.",
+        "note": "Use this to disable registering on Flexa.",
         "length": 16
       },
       "allow": {
@@ -95,10 +95,10 @@ All features:
         "overresourcessuspend": false
       },
       "oauth2": {
-        "_comment": "Go to https://discord.dev/ and create an application to set up OAuth2. This is required for flexa to work. You must also set the redirect URL to the link below.",
-        "id": "0000000000000000000",
-        "secret": "0000000000000000000000000000-",
-        "link": "https://client.example.com",
+        "_comment": "Go to https://discord.dev/ and create an application to set up OAuth2. This is required for Flexa to work. You must also set the redirect URL to the link below.",
+        "id": "Your client ID",
+        "secret": "Your client secret",
+        "link": "http://localhost:3000",
         "callbackpath": "/callback",
         "prompt": true,
         "ip": {
@@ -124,8 +124,8 @@ All features:
         "default": "default",
         "list": {
           "default": {
-            "ram": 1024,
-            "disk": 1024,
+            "ram": 2048,
+            "disk": 5120,
             "cpu": 100,
             "servers": 2
           }
@@ -134,14 +134,14 @@ All features:
           "note": "This allows you to set a different plan/package to people who have a specific role however this requires the Discord bot to be configured and functioning. This is mainly used for Boost rewards.",
           "roleServer": "Discord Server ID",
           "roles": {
-            "Discord Role ID": "flexa package name"
+            "Discord Role ID": "Flexa package name"
           }
         }
       },
       "locations": {
         "1": {
           "package": null,
-          "name": "Location 1"
+          "name": "Default"
         }
       },
       "eggs": {
@@ -150,7 +150,7 @@ All features:
           "minimum": {
             "ram": 1024,
             "disk": 1024,
-            "cpu": 100
+            "cpu": 75
           },
           "maximum": {
             "ram": null,
@@ -166,7 +166,7 @@ All features:
               "BUILD_NUMBER": "latest"
             },
             "feature_limits": {
-              "databases": 0,
+              "databases": 4,
               "backups": 4
             }
           }
@@ -229,7 +229,7 @@ All features:
     }
   },
   "antivpn": {
-    "note": "For this to work, generate an API Key on https://proxycheck.io/. If you do not put a key, flexa will automatically disable anti-VPN.",
+    "note": "For this to work, generate an API Key on https://proxycheck.io/. If you do not put a key, Flexa will automatically disable anti-VPN.",
     "status": false,
     "APIKey": "Proxycheck API Key",
     "whitelistedIPs": [
@@ -237,7 +237,7 @@ All features:
     ]
   },
   "whitelist": {
-    "note": "This allows only specific people to be able to login to the flexa dashboard. This does not affect your Panel.",
+    "note": "This allows only specific people to be able to login to the Flexa dashboard. This does not affect your Panel.",
     "status": false,
     "users": [
       "User ID"
