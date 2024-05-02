@@ -2,6 +2,9 @@
 
 # Flexa V1.0
 
+> [!Demo]
+> Demo
+
 > [!NOTE]
 > Flexa is a [Heliactyl 14](https://github.com/heliactyloss/heliactyl) but a Flexa Style, We just changed the design to the modern way.
 
