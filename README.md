@@ -48,35 +48,38 @@ server {
     server_name <domain>;
     return 301 https://$server_name$request_uri;
 }
+
 server {
     listen 443 ssl http2;
-location /afkwspath {
-  proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection "upgrade";
-  proxy_pass "http://localhost:<port>/afkwspath";
-}
-    
+
+    location /ws {
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_pass "http://localhost:<port>/ws";
+    }
+
     server_name <domain>;
-ssl_certificate /etc/letsencrypt/live/<domain>/fullchain.pem;
+
+    ssl_certificate /etc/letsencrypt/live/<domain>/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/<domain>/privkey.pem;
     ssl_session_cache shared:SSL:10m;
     ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers  HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
-location / {
+
+    location / {
       proxy_pass http://localhost:<port>/;
       proxy_buffering off;
       proxy_set_header X-Real-IP $remote_addr;
-  }
+    }
 }
 ```
 ### Create SSL certificates
 
  - Run `sudo apt update`
- - Run `sudo apt install -y certbot`
+ - Run `apt install nginx && apt install certbot -y`
  - Run `ufw allow 80 && ufw allow 443`
- - Run `sudo apt install -y python3-certbot-nginx`
  - Run `certbot certonly --nginx -d <Your Flexa Domain>`
 
 
