@@ -30,6 +30,7 @@ All features:
   - Clone the repo: `git clone https://github.com/Pterify/flexacp.git /var/www/flexa`
   - `cd /var/www/flexa && npm i`
   - To run Flexa, use `node .`
+  - To Running in background, use `npm install pm2 -g` after that `cd /var/www/flexa && pm2 start node .`
   
   Windows ✅
   - Download Nodejs: [Download x64](https://nodejs.org/dist/v18.20.2/node-v18.20.2-x64.msi)
