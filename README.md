@@ -2,8 +2,7 @@
 
 # Flexa V1.0
 
-> [!Demo]
-> Demo
+> Flexa Demo Click here if you want to see the demo [Demo](http://demo.flexacp.fr.to/)
 
 > [!NOTE]
 > Flexa is a [Heliactyl 14](https://github.com/heliactyloss/heliactyl) but a Flexa Style, We just changed the design to the modern way.
