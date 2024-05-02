@@ -25,7 +25,7 @@ All features:
   - reopen a new ssh session (eg restart putty)
   - `nvm install 16`
   - check the node version with `node -v`
-  - Clone the repo: `https://github.com/Pterify/flexacp.git /var/www/heliactyl`
+  - Clone the repo: `git clone https://github.com/Pterify/flexacp.git /var/www/heliactyl`
   - `cd /var/www/heliactyl && npm i`
   - To run Flexa, use `node .`
   
