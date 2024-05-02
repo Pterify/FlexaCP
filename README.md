@@ -315,3 +315,6 @@ location / {
 }
 ```
  - Run `systemctl restart nginx` and try open your domain.
+
+###Want to see more updates for this project?
+[Support This Project ❤](https://patreon.com/Pterify)
