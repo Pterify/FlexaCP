@@ -320,6 +320,3 @@ server {
   }
 }
 ```
-
-### Want to see more updates for this project? <br>
-[Support This Project ❤](https://www.patreon.com/pterify/membership)
