@@ -1,4 +1,4 @@
-![alt text](https://elastic-cloud.xaa.icu/secure/file/eyEL73gAG9BaR)
+![alt text](https://raw.githubusercontent.com/Pterify/FlexaCP/main/FlexaCP.png)
 
 # Flexa V1.0
 
