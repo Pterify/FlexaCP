@@ -80,7 +80,8 @@ server {
  - Run `sudo apt update`
  - Run `apt install nginx && apt install certbot -y`
  - Run `ufw allow 80 && ufw allow 443`
- - Run `certbot certonly --nginx -d <Your Flexa Domain>`
+ - Run `certbot certonly -d <Your Flexa Domain>`
+ - Select `1`
 
 
  - Run `systemctl restart nginx` and try open your domain.
