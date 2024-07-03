@@ -87,13 +87,13 @@
               <br>
               
               <% /* Resources - RAM, CPU, Disk */ %>
-              <label for="ram" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CPU (Core)</label>
-              <input type="text" id="ram" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="<%= (packages ? packages.ram : 0)/1024 + extraresources.ram/1024 - ram/1024 %>" value="<%= (packages ? packages.ram : 0)/1024 + extraresources.ram/1024 - ram/1024 %>">
+              <label for="cpu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CPU (Core)</label>
+              <input type="text" id="cpu" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="<%= (packages ? packages.cpu : 0)/100 + extraresources.cpu/100 - cpu/100 %>" value="<%= (packages ? packages.cpu : 0)/100 + extraresources.cpu/100 - cpu/100 %>" value="<%= (packages ? packages.cpu : 0)/100 + extraresources.cpu/100 - cpu/100 %>" value="<%= (packages ? packages.cpu : 0)/100 + extraresources.cpu/100 - cpu/100 %>">
 
               <br>
               
-              <label for="cpu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">RAM (GB)</label>
-              <input type="text" id="cpu" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="<%= (packages ? packages.ram : 0)/1024 + extraresources.ram/1024 - ram/1024 %>" value="<%= (packages ? packages.ram : 0)/1024 + extraresources.ram/1024 - ram/1024 %>">
+              <label for="ram" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">RAM (GB)</label>
+              <input type="text" id="ram" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="<%= (packages ? packages.ram : 0)/1024 + extraresources.ram/1024 - ram/1024 %>" value="<%= (packages ? packages.ram : 0)/1024 + extraresources.ram/1024 - ram/1024 %>">
 
               <br>
               
