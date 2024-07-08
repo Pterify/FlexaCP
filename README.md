@@ -4,3 +4,5 @@
 
 > [!NOTE]
 > Flexa V2.0 It will be released soon © Copyright 2024 Pterify.
+>
+* [Click here to V2.0](https://github.com/FlexaCP)
