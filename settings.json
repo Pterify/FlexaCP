@@ -1,13 +1,11 @@
 {
   "name": "Flexa",
-  "support": "https://discord.gg/kAjb8MXe8M",
-  
   "pterodactyl": {
     "domain": "https://panel.example.com",
     "key": "Your Pterodactyl API key with all permissions"
   },
   "timezone": "Europe/London",
-  "version": "2.0",
+  "version": "1.0",
   "website": {
     "port": 3000,
     "secret": "Default Secret (Change this to any string you want)"
