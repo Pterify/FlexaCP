@@ -1,5 +1,7 @@
 {
   "name": "Flexa",
+  "support": "https://discord.gg/kAjb8MXe8M",
+  
   "pterodactyl": {
     "domain": "https://panel.example.com",
     "key": "Your Pterodactyl API key with all permissions"
